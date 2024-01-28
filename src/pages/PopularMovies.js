@@ -15,7 +15,7 @@ function PopularMovies() {
   async function getAnime() {
     window.scrollTo(0, 0);
     let res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/getmalinfo?criteria=movie&count=100`
+      `${process.env.REACT_APP_BACKEND_URL}${encodeURIComponent(`api/getmalinfo?criteria=movie&count=100`)}`
     );
 
     setLoading(false);

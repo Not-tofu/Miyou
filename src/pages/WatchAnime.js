@@ -30,7 +30,7 @@ function WatchAnime() {
     setLoading(true);
     window.scrollTo(0, 0);
     let res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/getlinks?link=/${episodeSlug}`
+      `${process.env.REACT_APP_BACKEND_URL2}api/getlinks?link=/${episodeSlug}`
     );
     setLoading(false);
     setEpisodeLinks(res.data);

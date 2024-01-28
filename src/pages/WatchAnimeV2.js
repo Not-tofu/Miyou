@@ -36,7 +36,7 @@ function WatchAnimeV2() {
     setLoading(true);
     window.scrollTo(0, 0);
     let res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/getmixlinks?id=${slug}&ep=${episode}`
+      `${process.env.REACT_APP_BACKEND_URL}${encodeURIComponent(`api/getmixlinks?id=${slug}&ep=${episode}`)}`
     );
     setEpisodeLinks(res.data);
     setCurrentServer(res.data.gogoLink);
