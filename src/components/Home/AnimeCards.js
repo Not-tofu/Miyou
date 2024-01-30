@@ -18,7 +18,7 @@ function AnimeCards(props) {
 
   async function getData() {
     let res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}${encodeURIComponent(`api/getmalinfo?criteria=${props.criteria}&count=${props.count}`)}`
+      `${process.env.REACT_APP_BACKEND_URL}api/getmalinfo?criteria=${props.criteria}&count=${props.count}`
     );
 
     setLoading(false);
